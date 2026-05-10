@@ -9,24 +9,24 @@ Detecta automáticamente si un texto está en **Español, Inglés, Francés o Po
 ```
 detector_idiomas/
 │
-├── INICIAR.bat              ← Doble clic para iniciar en Windows
-├── iniciar.sh               ← Ejecutar en Linux/Mac
-├── requirements.txt         ← Librerías necesarias (automático)
+├── INICIAR.bat             
+├── iniciar.sh             
+├── requirements.txt         
 │
 ├── datos/
-│   └── Language Detection.csv   ← ⚠️ DEBES COLOCAR ESTE ARCHIVO AQUÍ
+│   └── Language Detection.csv  
 │
 ├── modelo/
 │   └── (se generan automáticamente)
 │
 └── app/
-    ├── entrenar.py          ← Entrena el modelo
-    └── app.py               ← Aplicación web
+    ├── entrenar.py        
+    └── app.py              
 ```
 
 ---
 
-## ▶️ Cómo usar
+## Cómo usar
 
 ### En Windows:
 1. Coloca el archivo `Language Detection.csv` dentro de la carpeta `datos/`
@@ -42,17 +42,17 @@ detector_idiomas/
 
 ---
 
-## ⚠️ Requisito previo
+##  Requisito previo
 
 Solo necesitas tener **Python instalado**.
 
 - Windows: descárgalo desde https://www.python.org/downloads/
-  - Durante la instalación marca ✅ **"Add Python to PATH"**
+  - Durante la instalación marca  **"Add Python to PATH"**
 - Linux: `sudo apt install python3 python3-pip`
 
 ---
 
-## 📌 Notas
+##  Notas
 
 - La **primera vez** que inicies tardará unos minutos (instala librerías y entrena el modelo)
 - Las siguientes veces abrirá directamente
