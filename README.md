@@ -28,17 +28,9 @@ Detector-de-idioma/
     └── app.py                    # Interfaz web (Streamlit)
 ```
 
----
-
-## Compatibilidad
-
-> **Este proyecto fue desarrollado y probado únicamente en Windows con Visual Studio Code.** El script `iniciar.sh` para Linux/Mac está incluido pero no ha sido probado. Si lo ejecutas en esos sistemas, puede funcionar o puede requerir ajustes adicionales que no están documentados aquí.
-
----
-
 ## Cómo usar
 
-### En Windows (probado y recomendado):
+### En Windows (recomendado):
 1. Coloca el archivo `Language Detection.csv` dentro de la carpeta `datos/`
 2. Abre una terminal en la carpeta del proyecto y ejecuta:
    ```
@@ -47,12 +39,12 @@ Detector-de-idioma/
 3. Espera a que se abra el navegador automáticamente en `http://localhost:8501`
 4. ¡Listo!
 
-> **Nota sobre Visual Studio Code:** no ejecutes el `.bat` con el botón de Play — ese botón cambia el directorio de trabajo y los archivos no se encuentran. En su lugar, abre la terminal integrada de VS Code (`Ctrl + ñ`), asegúrate de estar en la carpeta raíz del proyecto y ejecuta `.\INICIAR.bat` desde ahí. También puedes hacer doble clic directamente sobre el archivo desde el Explorador de Windows.
+> **Nota sobre Visual Studio Code:** si no ejecuta el `.bat` con el botón de Play — puede que ese botón cambie el directorio de trabajo y los archivos no se encuentran. En su lugar, abre la terminal integrada de VS Code (`Ctrl + ñ`), asegúrate de estar en la carpeta raíz del proyecto y ejecuta `.\INICIAR.bat` desde ahí. También puedes hacer doble clic directamente sobre el archivo desde el Explorador de Windows.
 
 > **Nota sobre el correo en Streamlit:** al abrir la app por primera vez, Streamlit puede mostrar una pantalla solicitando un correo electrónico. No es obligatorio ingresar uno real — basta con escribir cualquier texto con formato de correo válido (por ejemplo, `usuario@correo.com`) y continuar.
 
-### En Linux/Mac (no probado):
-El script `iniciar.sh` está disponible pero **no fue verificado en estos sistemas**. Si deseas intentarlo:
+### En Linux/Mac:
+El script `iniciar.sh` está disponible. Si deseas intentarlo:
 1. Coloca el archivo `Language Detection.csv` dentro de la carpeta `datos/`
 2. Abre una terminal en la carpeta del proyecto
 3. Ejecuta: `bash iniciar.sh`
