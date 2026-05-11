@@ -30,19 +30,32 @@ Detector-de-idioma/
 
 ---
 
+## Compatibilidad
+
+> **Este proyecto fue desarrollado y probado únicamente en Windows con Visual Studio Code.** El script `iniciar.sh` para Linux/Mac está incluido pero no ha sido probado. Si lo ejecutas en esos sistemas, puede funcionar o puede requerir ajustes adicionales que no están documentados aquí.
+
+---
+
 ## Cómo usar
 
-### En Windows:
+### En Windows (probado y recomendado):
 1. Coloca el archivo `Language Detection.csv` dentro de la carpeta `datos/`
-2. Haz **doble clic** en `INICIAR.bat`
-3. Espera a que se abra el navegador
+2. Abre una terminal en la carpeta del proyecto y ejecuta:
+   ```
+   .\INICIAR.bat
+   ```
+3. Espera a que se abra el navegador automáticamente en `http://localhost:8501`
 4. ¡Listo!
 
-### En Linux/Mac:
+> **Nota sobre Visual Studio Code:** no ejecutes el `.bat` con el botón de Play — ese botón cambia el directorio de trabajo y los archivos no se encuentran. En su lugar, abre la terminal integrada de VS Code (`Ctrl + ñ`), asegúrate de estar en la carpeta raíz del proyecto y ejecuta `.\INICIAR.bat` desde ahí. También puedes hacer doble clic directamente sobre el archivo desde el Explorador de Windows.
+
+### En Linux/Mac (no probado):
+El script `iniciar.sh` está disponible pero **no fue verificado en estos sistemas**. Si deseas intentarlo:
 1. Coloca el archivo `Language Detection.csv` dentro de la carpeta `datos/`
 2. Abre una terminal en la carpeta del proyecto
 3. Ejecuta: `bash iniciar.sh`
-4. ¡Listo!
+
+Si encuentras errores, puedes instalar las dependencias manualmente con `pip3 install -r requirements.txt` y luego ejecutar `streamlit run app/app.py`.
 
 ---
 
