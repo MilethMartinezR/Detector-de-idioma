@@ -6,7 +6,7 @@ import os
 # ─── Configuracion de la pagina ───────────────────────
 st.set_page_config(
     page_title="Detector de Idiomas",
-    page_icon="🌍",
+    page_icon="",
     layout="centered"
 )
 st.markdown("""
@@ -66,14 +66,14 @@ INFO_IDIOMAS = {
 }
 
 # ─── Interfaz ─────────────────────────────────────────
-st.title("🌍 Detector de Idiomas")
+st.title("Detector de Idiomas")
 st.markdown("Escribe o pega cualquier texto y el sistema detectará automáticamente en qué idioma está escrito.")
 st.markdown("---")
 
 # Verificar si el modelo existe
 ruta_modelo = os.path.join(os.path.dirname(__file__), '..', 'modelo', 'modelo_idiomas.pkl')
 if not os.path.exists(ruta_modelo):
-    st.error("⚠️ El modelo no está entrenado todavía. Por favor cierra esta ventana y vuelve a ejecutar INICIAR.bat (Windows) o iniciar.sh (Linux).")
+    st.error("El modelo no está entrenado todavía. Por favor cierra esta ventana y vuelve a ejecutar INICIAR.bat (Windows) o iniciar.sh (Linux).")
     st.stop()
 
 # Cargar modelo
@@ -85,7 +85,7 @@ except Exception as e:
 
 # Área de texto
 texto_usuario = st.text_area(
-    "✍️ Escribe tu texto aquí:",
+    " Escribe tu texto aquí:",
     height=200,
     placeholder="Ejemplo: El procesamiento del lenguaje natural es fascinante..."
 )
@@ -93,14 +93,14 @@ texto_usuario = st.text_area(
 # Botón de detección
 col1, col2, col3 = st.columns([1, 2, 1])
 with col2:
-    detectar = st.button("🔍 Detectar Idioma", use_container_width=True)
+    detectar = st.button(" Detectar Idioma", use_container_width=True)
 
 # ─── Resultado ────────────────────────────────────────
 if detectar:
     if not texto_usuario.strip():
-        st.warning("⚠️ Por favor escribe algún texto antes de detectar.")
+        st.warning(" Por favor escribe algún texto antes de detectar.")
     elif len(texto_usuario.strip()) < 10:
-        st.warning("⚠️ El texto es muy corto. Escribe al menos una oración completa.")
+        st.warning(" El texto es muy corto. Escribe al menos una oración completa.")
     else:
         with st.spinner("Analizando el texto..."):
             texto_limpio = normalizar(texto_usuario)
@@ -113,7 +113,7 @@ if detectar:
 
             info = INFO_IDIOMAS.get(idioma_detectado, {
                 'nombre': idioma_detectado,
-                'bandera': '🌐',
+                'bandera': '',
                 'color': '#888'
             })
 
@@ -140,7 +140,7 @@ if detectar:
         )
 
         for idioma, prob in probs_ordenadas:
-            info_i = INFO_IDIOMAS.get(idioma, {'nombre': idioma, 'bandera': '🌐'})
+            info_i = INFO_IDIOMAS.get(idioma, {'nombre': idioma, 'bandera': ''})
             st.progress(
                 float(prob),
                 text=f"{info_i['bandera']} {info_i['nombre']}: {prob*100:.1f}%"
