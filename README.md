@@ -1,10 +1,10 @@
-# 🌍 Detector de Idiomas
+# Detector de Idiomas
 
 Detecta automáticamente si un texto está en **Español, Inglés, Francés o Portugués**.
 
 ---
 
-## 📁 Estructura del proyecto
+##  Estructura del proyecto
 
 ```
 detector_idiomas/
