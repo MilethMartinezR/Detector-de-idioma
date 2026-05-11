@@ -49,6 +49,8 @@ Detector-de-idioma/
 
 > **Nota sobre Visual Studio Code:** no ejecutes el `.bat` con el botón de Play — ese botón cambia el directorio de trabajo y los archivos no se encuentran. En su lugar, abre la terminal integrada de VS Code (`Ctrl + ñ`), asegúrate de estar en la carpeta raíz del proyecto y ejecuta `.\INICIAR.bat` desde ahí. También puedes hacer doble clic directamente sobre el archivo desde el Explorador de Windows.
 
+> **Nota sobre el correo en Streamlit:** al abrir la app por primera vez, Streamlit puede mostrar una pantalla solicitando un correo electrónico. No es obligatorio ingresar uno real — basta con escribir cualquier texto con formato de correo válido (por ejemplo, `usuario@correo.com`) y continuar.
+
 ### En Linux/Mac (no probado):
 El script `iniciar.sh` está disponible pero **no fue verificado en estos sistemas**. Si deseas intentarlo:
 1. Coloca el archivo `Language Detection.csv` dentro de la carpeta `datos/`
