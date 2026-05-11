@@ -49,7 +49,7 @@ def normalizar(texto):
 
 df['texto_limpio'] = df['Text'].apply(normalizar)
 df = df[df['texto_limpio'].str.len() > 5]
-print(f"       Textos después de normalizar: {len(df)}")
+print(f"       Textos despues de normalizar: {len(df)}")
 
 # ─── 4. Entrenar el modelo ─────────────────────────────
 print("\n[4/5] Entrenando el modelo...")

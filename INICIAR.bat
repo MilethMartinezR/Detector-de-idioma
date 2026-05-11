@@ -1,6 +1,10 @@
 @echo off
 title Detector de Idiomas
 color 0A
+
+:: Cambiar al directorio donde esta este .bat
+cd /d "%~dp0"
+
 echo ============================================
 echo      DETECTOR DE IDIOMAS - Iniciando...
 echo ============================================

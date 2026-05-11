@@ -9,6 +9,13 @@ st.set_page_config(
     page_icon="🌍",
     layout="centered"
 )
+st.markdown("""
+    <style>
+        #MainMenu {visibility: hidden;}
+        footer {visibility: hidden;}
+        header {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 
 # ─── Estilos ──────────────────────────────────────────
 st.markdown("""
